@@ -46,7 +46,7 @@ body {
     text-align: center;
 }
 
-input[type=text] {
+#text {
     width: 50%;
     border: 2px solid #000000;
     border-radius: 4px;
@@ -65,15 +65,30 @@ input[type=text]:focus{
   }
 
 .reset,
-.button {
+#button {
     border: none;
     cursor: pointer;
     padding: 15px 25px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    border-radius: 8px;
 }
 
 .reset.button:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+textarea {
+    font-size: 18px;
+}
+
+#answer {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 30px;
+    transition:.3s;
+    display: none;
+
 }
