@@ -99,6 +99,7 @@ textarea {
     display: none;
 
 }
+
 i {
     margin: 0;
     padding-top: 10px;
@@ -110,10 +111,23 @@ i:hover {
     color: #5d5e60; 
 }
 
-footer {
+#textcss {
+    font-size: 20px;
+  }
+  
+  .signature {
+    margin-top: 235px;
     text-align: center;
-    margin-top: 350px;
-    padding-top: 20px;
-    padding-bottom: 17px;
-    background-image: linear-gradient(160deg, #42f49b , #d3f441)
-}
+    color: #000000;
+    position: absolu;
+  }
+  
+  #my-name a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  #my-name a:hover {
+      color: #00ffea;
+      transition: .4s ease-out;
+  }
