@@ -2,7 +2,7 @@ const computeBaby = document.querySelector('#button');
 const reset = document.querySelector('#reset');
 const textBox = document.querySelector(
   // to edit out textarea and make answer blend with background, change # -> . and vice versa!
-  '#answer'
+  '.answer'
 );
 
 loadEventListeners();
