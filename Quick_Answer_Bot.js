@@ -1,16 +1,7 @@
-const computeBaby = document.querySelector('#button');
+const compute = document.querySelector('#button');
 const reset = document.querySelector('#reset');
-const textBox = document.querySelector(
-  // to edit out textarea and make answer blend with background, change # -> . and vice versa!
-  '.answer'
-);
-
-loadEventListeners();
-
-function loadEventListeners() {
-  computeBaby.addEventListener('click', getAnswer);
-  reset.addEventListener('click', refreshPage);
-}
+const inputBox = document.querySelector('#text')
+const textBox = document.querySelector('.answer');
 
 const botAnswers = [
   'Yes.',
@@ -39,16 +30,30 @@ const botAnswers = [
   'Name the baby salomni.'
 ];
 
-function getAnswer() {
-  if (textBox.innerHTML === '?') {
-    alert('please type a question');
-  } else if (textBox.innerHTML !== null || '?') {
-    const randIndex = Math.floor(Math.random() * botAnswers.length);
-    textBox.style.display = 'inline';
-    textBox.innerHTML = botAnswers[randIndex];
-  }
-}
+loadEventListeners();
 
 function refreshPage() {
   document.location.reload(true);
+}
+
+function dontDisplayAnswer() {
+  textBox.style.display = 'none'
+}
+
+function displayAnswer() {
+  textBox.style.display = 'inline-flex';
+}
+
+function getAnswer() {
+  const userValue = document.getElementById("text").value;
+  if (!userValue.includes('?')) {
+    alert('please type some text with a question mark (what is bream?)');
+    dontDisplayAnswer();
+  } else {
+    const randIndex = Math.floor(Math.random() * botAnswers.length);
+    textBox.innerHTML = botAnswers[randIndex];
+    compute.style.display = 'none' // gives user reason to press reset to ask another question!
+    displayAnswer();
+  }
+  
 }
