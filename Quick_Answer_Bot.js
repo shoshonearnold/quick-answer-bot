@@ -42,6 +42,7 @@ function dontDisplayAnswer() {
 
 function displayAnswer() {
   textBox.style.display = 'inline-flex';
+  document.getElementById("text").readOnly = true;
 }
 
 function getAnswer() {
@@ -55,5 +56,6 @@ function getAnswer() {
     compute.style.display = 'none' // gives user reason to press reset to ask another question!
     displayAnswer();
   }
+  
   
 }
