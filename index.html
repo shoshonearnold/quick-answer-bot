@@ -3,34 +3,51 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="Quick_Answer_Bot.css">
+	<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<title>Quick Answer Bot!</title>
 </head>
+
 <body>
-		<h1 id="head">Quick Answer Bot!</h1>
-		<h2 id="h2">Type your question, and get the answer! Finally, no more pesky researching ;)</h2>
+	<div class="wrapper">
+		<h1 id="head">Quick Answer Bot</h1>
+		<h2 id="h2">Type your question, and get the answer! <br>Finally, no more pesky researching ;)</h2>
 		<h4 id="h4">Careful! The Answer may surprise you.</h4>
 
-			<form class="form">
-				<input id="text" placeholder="Type Question Here...">
-				<br><br>
-				<button id="button" input type="button" onclick="getAnswer();">Compute Baby!</button>
-        		<button id="reset" type="Reset" value="Clear">Clear</button>
-			
-			<br> 	<br>
-
+		<form class="form">
+			<input id="text" style="font-size: 14px;" placeholder="Type Question Here...">
+			<br><br>
 			<div class="answer">
-				<textarea readonly name="youranswer" id="answer" cols="60" rows="2"></textarea>
+				<textarea readonly name="youranswer"></textarea>
+				<br>
 			</div>
-			<footer>
-				<div class='signature'>
-					<br>
-					<span id='my-name'>
-						<p id='textcss'>Created with ☕ by<a href='https://heuristic-mayer-141d7c.netlify.com/' target='_blank'> <span id='textcss'>Shoshone Arnold</span></a></p>
-					</span>
-				</div>
-			</footer>
-			<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<br>
+			<button id="button" input type="button" onclick="getAnswer();">Compute</button>
+			<button id="reset" type="Reset" value="Clear">Clear</button><br><br>
+		</form>
+
+		<footer>
+			<div class='signature'>
+				<br>
+				<span id='my-name'>
+					<p id='textcss'>Created with ☕ by<a href='https://www.shoshonearnold.com/' target='_blank'> 
+						<span id='textcss'>Shoshone Arnold</span></a>
+					</p>
+					<div class="icons">
+						<a href="https://www.linkedin.com/in/shoshone-arnold/" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-linkedin fa-2x"></i>
+						</a>
+						<a href="https://github.com/shoshonearnold" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github fa-2x"></i>
+						</a>
+						<a href="https://codepen.io/EastCoastShony/" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-codepen fa-2x"></i>
+						</a>
+					</div>
+				</span>
+			</div>
+		</footer>
+	</div>
 	<script type="text/javascript" src="Quick_Answer_Bot.js"></script>
 </body>
 </html>
